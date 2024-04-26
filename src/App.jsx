@@ -48,13 +48,29 @@ function Board({ squares, xIsNext, onPlay }) {
 export default function Game() {
   const [ xIsNext, setXIsNext ] = useState(true);
   const [ history, setHistory ] = useState([Array(9).fill(null)]);
-  const currentSquares = history[history.length - 1];
+  const [ currentMove, setCurrentMove ] = useState(0);
+  const currentSquares = history[currentMove];
 
-  function handlePlay(nextSquares) {    
-    setHistory([...history, nextSquares]);
+  function handlePlay(nextSquares) { 
+    let nextHistory = [...history.slice(0, currentMove + 1), nextSquares];  
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1)
     setXIsNext(!xIsNext);
   }
+  
+  function jumpTo(moveNo) {
+    setCurrentMove(moveNo);
+    setXIsNext(moveNo % 2 === 0);
+  }
 
+  const moves = history.map((squares, move) => (
+    <li key={move}>
+      <button onClick={() => jumpTo(move)}>
+        Go to {move > 0 ? ` move #${move}` : 'game start'}
+      </button>
+    </li>
+  ));
+  
   return (
     <div className="game">
       <div className="game-board">
@@ -65,7 +81,9 @@ export default function Game() {
         />
       </div>
       <div className="game-info">
-        <ol>{/*TODO*/}</ol>
+        <ol>
+          {moves}
+        </ol>
       </div>
     </div>
   )
