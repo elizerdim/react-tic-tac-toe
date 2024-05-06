@@ -1,8 +1,33 @@
-# React + Vite
+# Tic-Tac-Toe tutorial from React docs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the introductory tutorial project on React documentation.  
 
-Currently, two official plugins are available:
+### The challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users should be able to:
+
+- Play the tic-tac-toe game by taking turns
+- See the history of the game by clicking the button for a certain move
+
+### Screenshot
+
+![](./screenshot.jpeg)
+
+### Links
+
+- [View Code](https://github.com/elizerdim/react-tic-tac-toe)
+- [Live Preview](https://react-tic-tac-toe-sage-psi.vercel.app/)
+
+### Built with
+
+- HTML
+- CSS
+- React
+
+### What I learned
+
+I followed along with the tutorial on React documentation to create this project locally and understand React better. I already knew the syntax, useState hook, rendering methods, and the principle of immutability in React, but I learned when and how state should be lifted and how useState can be used to save history and render a point that history. I already feel more comfortable using React and I plan to finish reading the documentation along with doing all the exercises to gain a deeper understanding of React.
+
+### Useful resources
+
+- [React docs](https://react.dev/) - Documentation is the best place to learn a library or framework.
