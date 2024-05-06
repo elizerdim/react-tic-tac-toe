@@ -21,7 +21,6 @@ Users should be able to:
 ### Built with
 
 - HTML
-- CSS
 - React
 
 ### What I learned
